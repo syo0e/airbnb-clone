@@ -1,10 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Routes from './Routes';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './Styles/GlobalStyle';
+import Theme from './Styles/Theme';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  <ThemeProvider theme={Theme}>
+    <GlobalStyle />
+    <Routes />
+  </ThemeProvider>,
+  document.getElementById('root')
 );
